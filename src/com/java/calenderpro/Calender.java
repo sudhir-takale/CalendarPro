@@ -97,6 +97,7 @@ public class Calender {
                     int minutes = scanner.nextInt();
                     setReminder(event, minutes);
                 }
+                else if(choice.equalsIgnoreCase("N"));
             }
         }
 
