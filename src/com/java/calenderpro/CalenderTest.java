@@ -16,7 +16,7 @@ public class CalenderTest {
 
     @BeforeEach
     public void setUp() {
-        // Clear eventList and reminderList before each test
+
         Calender.eventList.clear();
         Calender.reminderList.clear();
     }

@@ -29,7 +29,6 @@ public class Event {
         this.dateTime = LocalDateTime.of(startDate, startTime);
     }
 
-    Event() {
-    }
+
 
 }
