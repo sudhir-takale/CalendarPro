@@ -106,9 +106,19 @@ public class Calender {
     LocalTime readValidTime(DateTimeFormatter formatter) {
         while (true) {
             try {
+
                 String input = scanner.next();
                 LocalTime time = LocalTime.parse(input, formatter);
-                return time;
+                
+                if(!time.isBefore(time.now())) {
+                    return time;
+
+                }
+                else {
+                    System.out.println("Time already gone");
+                }
+                
+                
             } catch (DateTimeParseException e) {
                 System.out.println("Wrong Format HH:mm");
             }
@@ -120,7 +130,15 @@ public class Calender {
             try {
                 String input = scanner.next();
                 LocalDate date = LocalDate.parse(input, formatter);
-                return date;
+
+                if(!date.isBefore(date.now())) {
+                    return date;
+                }
+                else {
+                    System.out.println("Entered wrong date");
+                }
+
+              
             } catch (DateTimeParseException e) {
                 System.out.println(" Wrong format dd-MM-yyyy.");
             }
